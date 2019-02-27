@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="style.css" rel="stylesheet">
+		<link href="simpletabs.css" rel="stylesheet">
+
+		<script type="text/javascript" src="simpletabs_1.3.js"></script>
+		<script type="text/javascript" src="simpletabs_1.3.packed.js"></script>
+		<script>
+		    function validaForm(){
+		        d = document.questao_2;
+
+		        if (!d.respp[0].checked && !d.respp[1].checked && !d.respp[2].checked && !d.respp[3].checked && !d.respp[4].checked) {
+		            window.showModalDialog("questao_2.html", window, "dialogHeight: 400 px","dialogWidth: 420 px" );
+		            return false;
+		        }
+		        return true;
+
+		    }
+		    //Quando a resposta em Português muda, as respostas em inglês e ELiS também mudam
+		    function setRespIE(){
+		        qp = document.quest3;
+
+		        if (qp.respp[0].checked){
+		            qp.respi[0].checked = "true";
+		            qp.respe[0].checked = "true";
+		        }
+		        if (qp.respp[1].checked) {
+		            qp.respi[1].checked = "true";
+		            qp.respe[1].checked = "true";
+		        }
+		        if (qp.respp[2].checked){
+		            qp.respi[2].checked = "true";
+		            qp.respe[2].checked = "true";
+		        }
+		        if (qp.respp[3].checked){
+		            qp.respi[3].checked = "true";
+		            qp.respe[3].checked = "true";
+		        }
+		        if (qp.respp[4].checked){
+		            qp.respi[4].checked = "true";
+		            qp.respe[4].checked = "true";
+		        }
+		        return true;
+
+		    }
+		    //Quando a resposta em inglês muda, as respostas em português e ELiS também mudam
+		    function setRespPE(){
+		        qp = document.quest3;
+
+		        if (qp.respi[0].checked){
+		            qp.respp[0].checked = "true";
+		            qp.respe[0].checked = "true";
+		        }
+		        if (qp.respi[1].checked){
+		            qp.respp[1].checked = "true";
+		            qp.respe[1].checked = "true";
+		        }
+		        if (qp.respi[2].checked){
+		            qp.respp[2].checked = "true";
+		            qp.respe[2].checked = "true";
+		        }
+		        if (qp.respi[3].checked){
+		            qp.respp[3].checked = "true";
+		            qp.respe[3].checked = "true";
+		        }
+		        if (qp.respi[4].checked){
+		            qp.respp[4].checked = "true";
+		            qp.respe[4].checked = "true";
+		        }
+		        return true;
+
+		    }
+
+		    //Quando a resposta em ELiS muda, as respostas em português e inglês também mudam
+		    function setRespPI(){
+		        qp = document.quest3;
+
+		        if (qp.respe[0].checked){
+		            qp.respp[0].checked = "true";
+		            qp.respi[0].checked = "true";
+		        }
+		        if (qp.respe[1].checked){
+		            qp.respp[1].checked = "true";
+		            qp.respi[1].checked = "true";
+		        }
+		        if (qp.respe[2].checked){
+		            qp.respp[2].checked = "true";
+		            qp.respi[2].checked = "true";
+		        }
+		        if (qp.respe[3].checked){
+		            qp.respp[3].checked = "true";
+		            qp.respi[3].checked = "true";
+		        }
+		        if (qp.respe[4].checked){
+		            qp.respp[4].checked = "true";
+		            qp.respi[4].checked = "true";
+		        }
+		        return true;
+
+		    }
+
+    </script>
+	</head>
+
+	<body>
+
+    <div align="center"><table align="center" border="0">
+            <tbody><tr>
+                <td>  <img name="ant" src="imagens/seta_esq.jpg" alt="Anterior" onclick="window.location.href='questao_1.html'" width="60" height="60" align="right" border="0"> </td>
+                <td width="640" align="center">
+
+                    <!--
+                                       <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player" width="600" height="400">
+                                           <param name="movie" value="player.swf" />
+                                           <param name="allowfullscreen" value="never" />
+                                           <param name="allowscriptaccess" value="never" />
+                                           <param name="autostart" value = "true"/>
+                                           <param name="wmode" value="transparent"/>
+                                           <!--<param name="loop" value="true"/>-->
+                    <!--
+                                            <param name="flashvars" value="file=perguntas/1g.flv&autostart=true" />
+                                            <embed
+                                                    type="application/x-shockwave-flash"
+                                                    id="player2"
+                                                    name="player2"
+                                                    src="player.swf"
+                                                    width="600"
+                                                    height="400"
+                                                    allowscriptaccess="never"
+                                                    allowfullscreen="false"
+                                                    autostart="true"
+                                                    flashvars="file=perguntas/1g.flv&autostart=true&loop=true"
+                                            />
+                                        </object>
+                     -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="perguntas.1g" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_pergunta2.mp4" width="150" height="150" align="middle">
+                    </iframe>
+
+                    <p id="sl-translate" signlang="perguntas.1g">
+                        </p><div class="simpleTabs" id="tabber1">
+                            <ul class="simpleTabsNavigation">
+                                <li><a href="#" id="tabber1_a_0" class="current">Português</a></li>
+                                <li><a href="#" id="tabber1_a_1" class="">English</a></li>
+                                <li><a href="#" id="tabber1_a_2" class="">Escrita das Línguas de Sinais</a></li>
+                            </ul>
+                            <div class="simpleTabsContent currentTab" id="tabber1_div_0">Quão satisfeito(a) você está com a sua saúde?                                <table align="center" border="0">
+                                    <tbody><tr valign="top" align="center">
+                                        <td align="center">
+
+                                            <!--
+                                                <object type="application/x-shockwave-flash" data="respostas/avaliacao0MR.swf" width="144" height="117“ volume_level = "0" >
+                                                <param name="volume_level" value = "0"/>
+                                                <param name="movie" value="respostas/avaliacao0MR.swf" />
+                                                </object>
+                                                -->
+
+                                            <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao0MR" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_muito_ruim.mp4" width="150" height="150" align="middle">
+                                            </iframe>
+
+                    <p id="sl-translate" signlang="respostas.avaliacao0MR">
+                        <br> Muito ruim <br>
+                        <input name="respp" id="resp1p" value="op1" onchange="return setRespIE()" type="radio" align="middle">
+                </p></td>
+                <td align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao25R.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao25R.swf" />
+                    </object>
+
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao25R" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_ruim.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao25R">
+                        <br> Ruim <br>
+                        <input name="respp" id="resp1p" value="op2" onchange="return setRespIE()" type="radio" align="middle">
+                </p></td>
+                <td valign="top" align="center">
+                   <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao50NRNB.swf" width="144" height="117“ volume_level = "0" >
+                    <param name="volume_level" value = "1"/>
+                    <param name="movie" value="respostas/avaliacao50NRNB.swf" />
+                    </object>
+                   -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao50NRNB" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_nem_ruim_bom.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao50NRNB">
+                    <br> Nem ruim <br> nem boa <br>
+                    <input name="respp" id="resp1p" value="op3" onchange="return setRespIE()" type="radio" align="middle">
+                </p></td>
+                <td align="center">
+<!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao75B.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao75B.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao75B" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_bom.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao75B">
+                    <br> Boa <br>
+                    <input name="respp" id="resp1p" value="op4" onchange="return setRespIE()" type="radio" align="middle">
+                </p></td>
+                <td align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao100MB.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao100MB.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao100MB" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_muito_bom.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao100MB">
+                    <br> Muito boa <br>
+                    <input name="respp" id="resp1p" value="op5" onchange="return setRespIE()" type="radio" align="middle">
+                </p></td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <div class="simpleTabsContent" id="tabber1_div_1">How satisfied are you with your health?        <table align="center" border="0">
+            <tbody><tr valign="top" align="center">
+                <td align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao0MR.swf" width="144" height="117“ volume_level = "0" >
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao0MR.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao0MR" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_muito_ruim.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao0MR">
+
+                    <br> Very poor  <br>
+                    <input name="respi" id="resp1i" value="op1" onchange="return setRespPE()" type="radio" align="middle">
+                </p></td>
+                <td align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao25R.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao25R.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao25R" marginwidth="0" marginheight="0" scrolling="auto" src="hugo/hugo_muito_ruim.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao25R">
+                    <br> Poor  <br>
+                    <input name="respi" id="resp1i" value="op2" onchange="return setRespPE()" type="radio" align="middle">
+                </p></td>
+                <td valign="top" align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao50NRNB.swf" width="144" height="117“ volume_level = "0" >
+                    <param name="volume_level" value = "1"/>
+                    <param name="movie" value="respostas/avaliacao50NRNB.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao50NRNB" marginwidth="0" marginheight="0" scrolling="auto" src="videos/video_1.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao50NRNB">
+                    <br> Neither poor <br> nor good <br>
+                    <input name="respi" id="resp1i" value="op3" onchange="return setRespPE()" type="radio" align="middle">
+                </p></td>
+                <td align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao75B.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao75B.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao75B" marginwidth="0" marginheight="0" scrolling="auto" src="videos/video_1.mp4" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao75B">
+                    <br> Good <br>
+                    <input name="respi" id="resp1i" value="op4" onchange="return setRespPE()" type="radio" align="middle">
+                </p></td>
+                <td align="center">
+                    <!--
+                    <object type="application/x-shockwave-flash" data="respostas/avaliacao100MB.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao100MB.swf" />
+                    </object>
+                    -->
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao100MB" marginwidth="0" marginheight="0" scrolling="auto" src="midia/bzs/respostas/avaliacao100MB.ogv" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao100MB">
+                    <br> Very good <br>
+                    <input name="respi" id="resp1i" value="op5" onchange="return setRespPE()" type="radio" align="middle">
+                </p></td>
+            </tr>
+        </tbody></table>
+
+    </div>
+
+    <div class="simpleTabsContent" id="tabber1_div_2"><div style="font-family: Elis;">
+            How would you rate your quality of life? </div>
+        <table align="center" border="0">
+            <tbody><tr valign="top" align="center">
+                <td align="center">
+
+<!--                    <object type="application/x-shockwave-flash" data="respostas/avaliacao0MR.swf" width="144" height="117“ volume_level = "0" >
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao0MR.swf" />
+                    </object>-->
+
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao0MR" marginwidth="0" marginheight="0" scrolling="auto" src="midia/bzs/respostas/avaliacao0MR.ogv" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao0MR">
+                    <br> </p><div style="font-family: Elis;"> Very poor </div> <br>
+                    <input name="respe" id="resp1e" value="op1" onchange="return setRespPI()" type="radio" align="middle">
+                </td>
+                <td align="center">
+
+<!--                    <object type="application/x-shockwave-flash" data="respostas/avaliacao25R.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao25R.swf" />
+                    </object>-->
+
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao25R" marginwidth="0" marginheight="0" scrolling="auto" src="midia/bzs/respostas/avaliacao25R.ogv" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao25R">
+                    <br> </p><div style="font-family: Elis;">Poor </div>  <br>
+                    <input name="respe" id="resp1e" value="op2" onchange="return setRespPI()" type="radio" align="middle">
+                </td>
+                <td valign="top" align="center">
+
+<!--                    <object type="application/x-shockwave-flash" data="respostas/avaliacao50NRNB.swf" width="144" height="117“ volume_level = "0" >
+                    <param name="volume_level" value = "1"/>
+                    <param name="movie" value="respostas/avaliacao50NRNB.swf" />
+                    </object>-->
+
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao50NRNB" marginwidth="0" marginheight="0" scrolling="auto" src="midia/bzs/respostas/avaliacao50NRNB.ogv" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao50NRNB">
+                    <br> </p><div style="font-family: Elis;"> Neither poor nor good </div> <br>
+                    <input name="respe" id="resp1e" value="op3" onchange="return setRespPI()" type="radio" align="middle">
+                </td>
+                <td align="center">
+
+<!--                    <object type="application/x-shockwave-flash" data="respostas/avaliacao75B.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao75B.swf" />
+                    </object>-->
+
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao75B" marginwidth="0" marginheight="0" scrolling="auto" src="midia/bzs/respostas/avaliacao75B.ogv" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao75B">
+                    <br> </p><div style="font-family: Elis;"> Good</div> <br>
+                    <input name="respe" id="resp1e" value="op4" onchange="return setRespPI()" type="radio" align="middle">
+                </td>
+                <td align="center">
+
+<!--                    <object type="application/x-shockwave-flash" data="respostas/avaliacao100MB.swf" width="144" height="117“ volume_level = "0">
+                    <param name="volume_level" value = "0"/>
+                    <param name="movie" value="respostas/avaliacao100MB.swf" />
+                    </object>-->
+
+                    <iframe class="embed-responsive-item" id="myFrame" signlang="respostas.avaliacao100MB" marginwidth="0" marginheight="0" scrolling="auto" src="midia/bzs/respostas/avaliacao100MB.ogv" width="150" height="150" align="middle">
+                    </iframe>
+                    <p id="sl-translate" signlang="respostas.avaliacao100MB">
+                    <br> </p><div style="font-family: Elis;"> Very good </div> <br>
+                    <input name="respe" id="resp1e" value="op5" onchange="return setRespPI()" type="radio" align="middle">
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+
+    </div></td>
+    <td>  <input src="imagens/seta_dir.jpg" value="prox" name="prox" onclick="window.location.href='questao_3.html'" alt="Próxima Pergunta" width="60" type="image" height="60" align="left" border="0"> </td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center">
+
+
+
+        </td>
+    </tr>
+    </tbody></table></div>
+		
+	</body>
+
+</html>
